@@ -5,12 +5,14 @@ import laserImage from '../images/laser.png';
 import rockImage from "../images/rock.png";
 import beginImage from "../images/Begin.png";
 
+import eindImage from '../images/eindscherm.png';
 import titleImage from '../images/loadingscreen.jpg';
 
 
 const Resources = {
     Player: new ImageSource(playerImage),
     Background: new ImageSource(scrollingBackgroundImage),
+    Eind: new ImageSource(eindImage),
 
     Rock: new ImageSource(rockImage),
     Laser: new ImageSource(laserImage),

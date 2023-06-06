@@ -1,4 +1,4 @@
-import { Actor, Vector, Input } from "excalibur";
+import { Vector, Input } from "excalibur";
 import { Resources, ResourceLoader } from "./resources.js";
 import { Rock } from "./spacerocks"
 import { Laser } from './laser'
@@ -6,11 +6,6 @@ import { Gameover } from './scenes/gameover.js'
 
 export class Player extends Laser {
     game;
-
-    // constructor() {
-    //     super();
-    //
-    // }
 
     onInitialize(engine){
         this.graphics.use(Resources.Player.toSprite());
@@ -59,7 +54,7 @@ export class Player extends Laser {
             engine.currentScene.add(laser)
             laser.pos = this.pos;
         }
-        if (this.pos.y < 0){
+        if (this.pos.y < 0 || this.pos.y > 600){
             this.pos = new Vector(400,400);
         }if (this.pos.x < 0 || this.pos.x > 800){
             this.pos = new Vector(400,400);

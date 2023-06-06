@@ -1,8 +1,6 @@
 import { Actor, Engine, Vector, Label, Color, Font, Sound, Timer, Scene, FontUnit } from "excalibur";
-import { Resources, ResourceLoader } from "../resources.js";
 import { Player } from '../player'
 import { Rock } from '../spacerocks'
-
 import { Background } from "../scrollingBackground.js";
 
 export class Begin extends Scene {
@@ -64,7 +62,6 @@ export class Begin extends Scene {
         this.add(rocks)
         rocks.pos = new Vector(800, Math.random() * 600);
     }
-
 
     updateScore() {
         this.score++

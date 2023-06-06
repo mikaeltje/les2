@@ -1,7 +1,6 @@
 import {Actor, Color, Font, Input, Label, Scene, Vector,} from "excalibur";
 import {Resources} from "../resources";
 
-// import { Resources, ResourceLoader } from "../resources.js";
 
 export class Gameover extends Scene {
     game;
@@ -14,7 +13,7 @@ export class Gameover extends Scene {
         this.game = engine;
 
         const background = new Actor();
-        background.graphics.use(Resources.Title.toSprite());
+        background.graphics.use(Resources.Eind.toSprite());
         background.pos = new Vector(0, 0);
         background.anchor = new Vector(0, 0);
         this.add(background);
@@ -28,19 +27,14 @@ export class Gameover extends Scene {
                 family: 'Arial',
                 size: 32,
                 color: Color.White,
+                bold: true,
     }),
             text: `Je hebt ${eindscore.score} secondes overleeft`,
-            pos: new Vector(250, 50),
+            pos: new Vector(200, 150),
 
         })
         this.add(this.textScore)
 
-    }
-    onActivate(ctx) {
-        if(ctx.data) {
-            console.log(`LEVEL: ${ctx.data.level}`)
-            console.log(`SCORE: ${ctx.data.score}`)
-        }
     }
 
     onPreUpdate(engine) {

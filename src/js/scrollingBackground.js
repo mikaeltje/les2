@@ -1,5 +1,5 @@
 import { Actor, Vector, GraphicsGroup } from 'excalibur';
-import { Resources, ResourceLoader } from './resources.js'
+import { Resources } from './resources.js'
 
 export class Background extends Actor {
     offset;

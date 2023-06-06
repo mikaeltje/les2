@@ -8,7 +8,6 @@ export class Rules extends Scene {
     }
 
     onInitialize(engine) {
-        // console.log("how to play")
         this.game = engine;
 
         const background = new Actor();
