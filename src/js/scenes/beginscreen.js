@@ -12,6 +12,10 @@ export class Begin extends Scene {
 
     onInitialize(engine) {
 
+        this.enableCapturePointer = true
+        this.on('pointerup',
+            (ev) => engine.goToScene('gameover', { level: 4, score: 12 }))
+
         const space = new Background();
         this.add(space);
 
