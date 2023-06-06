@@ -25,5 +25,5 @@ for (const key in Resources) {
     resourceArray.push(Resources[key])
 }
 const ResourceLoader = new Loader(resourceArray)
-
+ResourceLoader.suppressPlayButton = true
 export { Resources, ResourceLoader }
