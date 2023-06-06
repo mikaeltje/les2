@@ -19,9 +19,6 @@ export class Gameover extends Scene {
         background.anchor = new Vector(0, 0);
         this.add(background);
 
-        this.enableCapturePointer = true
-        this.on('pointerup',
-            (ev) => engine.goToScene('gameover', { level: 4, score: 12 }))
 
         const eindscore = JSON.parse(localStorage.getItem("score"))
         if(eindscore) {console.log(eindscore.score)}
@@ -31,7 +28,7 @@ export class Gameover extends Scene {
                 family: 'Arial',
                 size: 32,
                 color: Color.White,
-            }),
+    }),
             text: `Je hebt ${eindscore.score} secondes overleeft`,
             pos: new Vector(250, 50),
 
