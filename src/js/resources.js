@@ -6,7 +6,6 @@ import rockImage from "../images/rock.png";
 import beginImage from "../images/Begin.png";
 
 import eindImage from '../images/eindscherm.png';
-import titleImage from '../images/loadingscreen.jpg';
 
 
 const Resources = {
@@ -18,16 +17,13 @@ const Resources = {
     Laser: new ImageSource(laserImage),
     Begin: new ImageSource(beginImage),
 
-    Title: new ImageSource(titleImage),
 
 }
-
 
 const resourceArray = []
 for (const key in Resources) {
     resourceArray.push(Resources[key])
 }
 const ResourceLoader = new Loader(resourceArray)
-
 
 export { Resources, ResourceLoader }
